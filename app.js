@@ -43,7 +43,7 @@ const claim = async () => {
         },
         "referrer": "https://hamsterkombat.io/",
         "referrerPolicy": "strict-origin-when-cross-origin",
-        "body": `{"count":500,"availableTaps":1000,"timestamp":${timestamp}}`,
+        "body": `{"count":1500,"availableTaps":1000,"timestamp":${timestamp}}`,
         "method": "POST",
         "mode": "cors",
         "credentials": "include"
@@ -73,7 +73,7 @@ const claim = async () => {
       },
       "referrer": "https://app.tapswap.club/",
       "referrerPolicy": "strict-origin-when-cross-origin",
-      "body": `{"taps":500,"time":1718002106452}`,
+      "body": `{"taps":1500,"time":1718002106452}`,
       "method": "POST",
       "mode": "cors",
       "credentials": "include"
