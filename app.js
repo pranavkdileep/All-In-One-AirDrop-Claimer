@@ -83,7 +83,7 @@ const claim = async () => {
     const data3 = data2;
     console.log(timestamp1)
     console.log(data3);
-    const final = data3.player.full_name + " " + data1;
+    const final = "data3.player.full_name" + " " + data1;
     console.log(final);
     sendTelegramMessage(final);
     return final
