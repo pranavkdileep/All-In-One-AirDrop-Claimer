@@ -85,6 +85,29 @@ const claim = async () => {
     console.log(data3);
     const final = "data3.player.full_name" + " " + data1;
     console.log(final);
+  const response2 = await fetch("https://jjvnmoyncmcewnuykyid.supabase.co/rest/v1/rpc/save_coins", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en",
+    "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impqdm5tb3luY21jZXdudXlreWlkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDg3MDE5ODIsImV4cCI6MjAyNDI3Nzk4Mn0.oZh_ECA6fA2NlwoUamf1TqF45lrMC0uIdJXvVitDbZ8",
+    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZWxlZ3JhbUlkIjo1NzE3MDAyNzE2LCJpYXQiOjE3MTgwMTQ2NjR9.hBa8TQ4j7lkipMvm0Oq2S4_9dtyzp_Sff2Cf0MFmuNc",
+    "cache-control": "no-cache",
+    "content-profile": "public",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site",
+    "x-client-info": "postgrest-js/1.9.2",
+    "x-telegram-user-id": "5717002716"
+  },
+  "referrer": "https://dot.dapplab.xyz/",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "{\"coins\":20000}",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});
     sendTelegramMessage(final);
     return final
 }
