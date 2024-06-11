@@ -108,6 +108,51 @@ const claim = async () => {
   "mode": "cors",
   "credentials": "include"
 });
+  const res3 = await fetch("https://hexacore-tg-api.onrender.com/api/daily-reward", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en",
+    "authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1NzE3MDAyNzE2LCJ1c2VybmFtZSI6ImRpbGVlcDI4NiIsInRpbWVzdGFtcCI6MTcxODA4NzU2Ni45MDk2Mzl9.y7cLitE_H6BVwKJAmp9tWw2GQij-yhDz7YHW8G8C3Lo",
+    "cache-control": "no-cache",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "sec-ch-ua": "\"Google Chrome\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Linux\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site"
+  },
+  "referrer": "https://ago-wallet.hexacore.io/",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "{\"user_id\":5717002716}",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});
+  const res4 = await fetch("https://hexacore-tg-api.onrender.com/api/mining-complete", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "en",
+    "authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1NzE3MDAyNzE2LCJ1c2VybmFtZSI6ImRpbGVlcDI4NiIsInRpbWVzdGFtcCI6MTcxODA4NzU2Ni45MDk2Mzl9.y7cLitE_H6BVwKJAmp9tWw2GQij-yhDz7YHW8G8C3Lo",
+    "cache-control": "no-cache",
+    "content-type": "application/json",
+    "pragma": "no-cache",
+    "sec-ch-ua": "\"Google Chrome\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Linux\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "cross-site"
+  },
+  "referrer": "https://ago-wallet.hexacore.io/",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": "{\"taps\":100}",
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "include"
+});
+  
     sendTelegramMessage(final);
     return final
 }
