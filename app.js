@@ -147,7 +147,7 @@ const claim = async () => {
   },
   "referrer": "https://ago-wallet.hexacore.io/",
   "referrerPolicy": "strict-origin-when-cross-origin",
-  "body": "{\"taps\":100}",
+  "body": "{\"taps\":40}",
   "method": "POST",
   "mode": "cors",
   "credentials": "include"
