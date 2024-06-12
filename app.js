@@ -180,6 +180,29 @@ const claim = async () => {
   "mode": "cors",
   "credentials": "include"
 });
+  const response5 = await fetch("https://api.hamsterkombat.io/clicker/sync", {
+        "headers": {
+          "accept": "*/*",
+          "accept-language": "en-US,en;q=0.9",
+          "authorization": "Bearer 1718202088797La6JDkS5kjqkeR2tIrpOIvlpbf8ZF7nbdN7GoYEYOeMsd5fVnxDKRG56DHXE5U6S1196575861",
+          "cache-control": "no-cache",
+          "pragma": "no-cache",
+          "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+          "sec-ch-ua-mobile": "?0",
+          "sec-ch-ua-platform": "\"Linux\"",
+          "sec-fetch-dest": "empty",
+          "sec-fetch-mode": "cors",
+          "sec-fetch-site": "same-site"
+        },
+        "referrer": "https://hamsterkombat.io/",
+        "referrerPolicy": "strict-origin-when-cross-origin",
+        "body": null,
+        "method": "POST",
+        "mode": "cors",
+        "credentials": "include"
+      });
+    const data5 = await response5.json();
+    console.log(data);
   
     sendTelegramMessage(final);
     return final
