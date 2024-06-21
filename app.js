@@ -50,41 +50,31 @@ const claim = async () => {
       });
     const data = await response.json();
     const data1 = data.clickerUser.balanceCoins;
-    // tiestamp like 
-    const timestamp1 = Date.now().toString();
-    const response1 = await fetch("https://api.tapswap.ai/api/player/submit_taps", {
-      "headers": {
-        "accept": "*/*",
-        "accept-language": "en",
-        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjU3MTcwMDI3MTYsImlhdCI6MTcxODAwMjEwMCwiZXhwIjoxNzE4MDA1NzAwfQ.GejP4j6ygbucLTIMg0ipOh3XrYCCVTPIoQrnXkUO7lY",
-        "cache-control": "no-cache",
-        "content-id": "115664",
-        "content-type": "application/json",
-        "pragma": "no-cache",
-        "sec-ch-ua": "\"Not A;Brand\";v=\"99\", \"Chromium\";v=\"123\", \"Google Chrome\";v=\"123\"",
-        "sec-ch-ua-mobile": "?1",
-        "sec-ch-ua-platform": "\"Android\"",
-        "sec-fetch-dest": "empty",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "cross-site",
-        "x-app": "tapswap_server",
-        "x-bot": "no",
-        "x-cv": "622"
-      },
-      "referrer": "https://app.tapswap.club/",
-      "referrerPolicy": "strict-origin-when-cross-origin",
-      "body": `{"taps":1500,"time":1718002106452}`,
-      "method": "POST",
-      "mode": "cors",
-      "credentials": "include"
-    });
-    
-    const data2 = await response1.json();
-    const data3 = data2;
-    console.log(timestamp1)
-    console.log(data3);
+    const seed = await fetch("https://elb.seeddao.org/api/v1/seed/claim", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "en",
+    "cache-control": "no-cache",
+    "pragma": "no-cache",
+    "sec-ch-ua": "\"Google Chrome\";v=\"123\", \"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"123\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Linux\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site",
+    "telegram-data": "query_id=AAHcicJUAgAAANyJwlRn4hVv&user=%7B%22id%22%3A5717002716%2C%22first_name%22%3A%22Dileep%22%2C%22last_name%22%3A%22Kumar%22%2C%22username%22%3A%22dileep286%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%7D&auth_date=1718985798&hash=f97602fc28c476d5febcf3cf34b8fcaea0022b0f92ced6e6e0c0603e53d4da33"
+  },
+  "referrer": "https://cf.seeddao.org/",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": null,
+  "method": "POST",
+  "mode": "cors",
+  "credentials": "omit"
+});
+  const seeddata = await seed.json();
+  console.log(seeddata);
     const final = "data3.player.full_name" + " " + data1;
-    console.log(final);
+    
   const response2 = await fetch("https://jjvnmoyncmcewnuykyid.supabase.co/rest/v1/rpc/save_coins", {
   "headers": {
     "accept": "*/*",
@@ -134,8 +124,7 @@ const claim = async () => {
   "mode": "cors",
   "credentials": "include"
 });
-  console.log("restore dot coin");
-  console.log(restore2.json());
+  
   const res3 = await fetch("https://hexacore-tg-api.onrender.com/api/daily-reward", {
   "headers": {
     "accept": "*/*",
@@ -202,7 +191,7 @@ const claim = async () => {
         "credentials": "include"
       });
     const data5 = await response5.json();
-    console.log(data);
+    
   
     sendTelegramMessage(final);
     return final
