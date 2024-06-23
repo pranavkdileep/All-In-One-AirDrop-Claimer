@@ -350,12 +350,12 @@ const wavewallet = async () => {
 
 
   const claim = async () => {
-  const seed = await seedapi();
-  const tap = await tapswap();
+  const seed = 'await seedapi();'
+  const tap = 'await tapswap();'
   const dorm = await dormint();
   const ham = await hamster();
   const pixel = await pixelverse();
-  const capy = await capybra();
+  const capy = 'await capybra();'
   const wave = await wavewallet();
   const final = 
 `Seed Response: ${seed}
