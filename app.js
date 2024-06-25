@@ -347,17 +347,65 @@ const wavewallet = async () => {
   const data = await response.json();
   return JSON.stringify(data);
 }
+const blum = async () => {
+  const response = await fetch("https://game-domain.blum.codes/api/v1/farming/claim", {
+    "headers": {
+      "accept": "application/json, text/plain, */*",
+      "accept-language": "en",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJoYXNfZ3Vlc3QiOmZhbHNlLCJ0eXBlIjoiQUNDRVNTIiwiaXNzIjoiYmx1bSIsInN1YiI6ImZhOTkyZTNiLTZjYTAtNDc4MC05MzQ5LWI5OGNhNDg5OGU3NiIsImV4cCI6MTcxOTMxNjEzNiwiaWF0IjoxNzE5MzEyNTM2fQ.Q6ieokSwNHCjM8WlYOuAFNlu4CD-g6Mow_cJND05MWc",
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "priority": "u=1, i",
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Linux\"",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-site"
+    },
+    "referrerPolicy": "no-referrer",
+    "body": null,
+    "method": "POST",
+    "mode": "cors",
+    "credentials": "include"
+  });
+  const start = await fetch("https://game-domain.blum.codes/api/v1/farming/start", {
+    "headers": {
+      "accept": "application/json, text/plain, */*",
+      "accept-language": "en",
+      "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJoYXNfZ3Vlc3QiOmZhbHNlLCJ0eXBlIjoiQUNDRVNTIiwiaXNzIjoiYmx1bSIsInN1YiI6ImZhOTkyZTNiLTZjYTAtNDc4MC05MzQ5LWI5OGNhNDg5OGU3NiIsImV4cCI6MTcxOTMxNjEzNiwiaWF0IjoxNzE5MzEyNTM2fQ.Q6ieokSwNHCjM8WlYOuAFNlu4CD-g6Mow_cJND05MWc",
+      "cache-control": "no-cache",
+      "pragma": "no-cache",
+      "priority": "u=1, i",
+      "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Google Chrome\";v=\"126\"",
+      "sec-ch-ua-mobile": "?0",
+      "sec-ch-ua-platform": "\"Linux\"",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-site"
+    },
+    "referrerPolicy": "no-referrer",
+    "body": null,
+    "method": "POST",
+    "mode": "cors",
+    "credentials": "include"
+  });
+  const data = await response.json();
+  const data2 = await start.json();
+  return JSON.stringify(data) + JSON.stringify(data2);
+}
 
 
 
   const claim = async () => {
   const seed = 'await seedapi();'
   const tap = 'await tapswap();'
-  const dorm = 'await dormint();'
+  const dorm = await dormint();
   const ham = await hamster();
   const pixel = await pixelverse();
   const capy = 'await capybra();'
   const wave = await wavewallet();
+  const blumm = await blum();
   const final = 
 `Seed Response: ${seed}
 --------------------------------
@@ -389,6 +437,11 @@ Capybra Response: ${capy}
 --------------------------------
 
 WaveWallet Response: ${wave}
+
+################################
+--------------------------------
+
+Blum Response: ${blumm}
 
 ################################
 --------------------------------
